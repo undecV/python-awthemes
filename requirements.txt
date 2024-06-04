@@ -1,0 +1,3 @@
+tksvg
+setuptools
+types-setuptools
