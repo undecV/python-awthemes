@@ -7,12 +7,23 @@ This port allows Python developers to create GUI applications with a modern and 
 
 ## Install
 
+### Install from GitHub
+
 ```bash
+pip install git+https://github.com/undecV/python-awthemes
+```
+
+alternatively, add this to your `requirements.txt` file:
+
+```requirements.txt
+python-awthemes @ git+https://github.com/undecV/python-awthemes.git@main
 ```
 
 ## Useage
 
 ```python
+from awthemes import AwthemesStyle
+
 root = tk.Tk()
 
 # Load AwthemesStyle for your Tk root.
