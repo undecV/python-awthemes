@@ -5,6 +5,7 @@ A port of [tcl-awthemes] to Python ttk.
 import logging
 from pathlib import Path
 from tkinter import ttk
+from typing import Union
 
 import tksvg  # type: ignore
 
@@ -31,7 +32,9 @@ class AwthemesStyle(ttk.Style):
     def theme_names(self) -> tuple[str]:
         return self.tk.splitlist(self.tk.call("ttk::themes"))
 
-    def theme_use(self, themename: str | None = None) -> str | None:  # type: ignore[override]
+    def theme_use(  # type: ignore[override]
+            self, themename: Union[str, None] = None
+            ) -> Union[str, None]:
         if themename is None:
             return super().theme_use(themename=None)
         is_tksvg_loaded = getattr(self.master, "_tksvg_loaded", False)
