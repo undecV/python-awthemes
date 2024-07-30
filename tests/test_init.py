@@ -1,6 +1,7 @@
 """Test cases for AwthemesStyle."""
 
 import logging
+import os
 import unittest
 import tkinter as tk
 
@@ -13,6 +14,12 @@ log = logging.getLogger()
 
 class AwthemesStyleTest(unittest.TestCase):
     """Test cases for AwthemesStyle."""
+
+    def setUp(self):
+        if os.name != "nt" and os.getenv("GITHUB_ACTIONS"):
+            os.system('Xvfb :1 -screen 0 1600x1200x16  &')
+            os.environ["DISPLAY"] = ":1.0"
+
 
     def test_style_init(self) -> None:
         """Check whether style is init normally."""
