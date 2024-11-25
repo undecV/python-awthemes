@@ -5,7 +5,7 @@ A port of [tcl-awthemes] to Python ttk.
 from setuptools import setup, find_packages
 
 
-__version__: str = "0.2.0"
+__version__: str = "0.2.1"
 
 
 setup(
