@@ -7,6 +7,20 @@ This port allows Python developers to create GUI applications with a modern and 
 
 ## Install
 
+### Install from PyPI
+
+[Python-Awthemes](https://pypi.org/project/python-awthemes/) is available in PyPI.
+
+```bash
+pip install python-awthemes
+```
+
+alternatively, add this to your `requirements.txt` file:
+
+```requirements.txt
+python-awthemes
+```
+
 ### Install from GitHub
 
 ```bash
